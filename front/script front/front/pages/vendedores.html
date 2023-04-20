@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title> legais </title>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Cadastro de vendas</h1>
+        <button onclick="modal1.classList.remove('oculto')">Novo Vendedor</button>
+        <a href="./index.html"><button >Vendas</button></a>
+        <div id="modal1" class="modal1 oculto">
+            <form id="novo">
+                <header style="grid-column-end: span 2;">
+                    <h1>Cadastro de Vendedor</h1>
+                </header>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+
+                <label for="matricula">Vendedor:</label>
+                <input type="number" name="matricula" id="matricula" required>
+
+                <input type="reset" value="Cancelar" onclick="modal1.classList.add('oculto')">
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Matricula</th>
+            </thead>
+            <tbody id="corpo"></tbody>
+        </table>
+    </main>
+</body>
+<script src="../scripts/vendedores.js"></script>
+</html>

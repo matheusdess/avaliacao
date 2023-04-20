@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/vendedores.css">
+    <title>Vendedores daora</title>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Cadastro de vendas</h1>
+        <button onclick="modal1.classList.remove('oculto')">Nova venda</button>
+        <a href="./vendedores.html"><button >Vendedores</button></a>
+        
+        <div id="modal1" class="modal1 oculto">
+            <form id="novo">
+                <header style="grid-column-end: span 2;">
+                    <h1>Cadastro de Vendas</h1>
+                </header>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade" id="quantidade" required>
+                <label for="produto">Produto:</label>
+                <input type="text" name="produto" id="produto" >
+                <label for="vendedor">Vendedor:</label>
+                <input type="text" name="vendedor" id="vendedor">
+                <input type="reset" value="Cancelar" onclick="modal1.classList.add('oculto')">
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Data</th>
+                <th>Quantidade</th>
+                <th>Produto</th>
+                <th>Vendedor</th>
+                <th>Atualizar</th>
+                <th>Excluir</th>
+            </thead>
+            <tbody id="corpo"></tbody>
+        </table>
+    </main>
+</body>
+<script src="../scripts/script.js"></script>
+</html>
